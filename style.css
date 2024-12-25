@@ -1,0 +1,544 @@
+/* Import Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav .nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: white;
+}
+
+.hero .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #45a049;
+}
+
+/* Top-Up Section */
+.top-up {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.top-up h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.packages {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.package {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions */
+}
+
+.package h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.package p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.buy-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transitions */
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Account Check Section */
+.account-check {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+    color: white;
+}
+
+.account-check h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.account-check p {
+    margin-bottom: 1rem;
+}
+
+.account-check input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 250px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.check-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transitions */
+}
+
+.check-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.account-details {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.events {
+    max-width: 800px; /* Adjust as needed for your layout */
+    margin: auto;
+    padding: 20px;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column; /* Stack events vertically */
+    max-height: calc(3 * 220px); /* Assuming each card is around 220px tall */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: add border for better visibility */
+    padding: 10px; /* Add padding inside the list */
+    background-color: #f1f1f1; /* Light background for the list */
+}
+
+.event-card {
+    display: flex;
+    margin-bottom: 15px; /* Spacing between cards */
+    background-color: #ffffff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* More prominent shadow effect */
+    overflow: hidden; /* Prevent overflow of content */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.event-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.event-image {
+    width: 120px; /* Fixed width for images */
+    height: 120px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Rounded top left corner */
+    border-top-right-radius: 8px; /* Rounded top right corner */
+}
+
+.event-details {
+    padding: 15px; /* Padding for text inside the card */
+    flex: 1; /* Allow details to take up remaining space */
+    color: #333; /* Dark text color for better readability */
+}
+
+.event-details h3 {
+    font-size: 1.2em; /* Slightly larger title */
+    margin: 0 0 10px; /* Spacing below the title */
+}
+
+.event-details p {
+    margin: 5px 0; /* Spacing between paragraphs */
+    line-height: 1.5; /* Improved line height for readability */
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .packages, .event-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items */
+    }
+
+    .package, .event {
+        width: 90%;  /* Make package and event cards take more width on small screens */
+        margin-bottom: 1rem; /* Add some space between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-up h2, .account-check h2, .events h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .top-up h3, .event h3 {
+        font-size: 1.2rem; /* Adjust font size for package and event titles */
+    }
+
+    input {
+        width: 80%; /* Make input field wider on small screens */
+    }
+}
+
+/* Button Hover Effect */
+.check-btn, .top-up-btn {
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Card Hover Effect */
+.package:hover, .event:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Add some box-shadow for cards */
+.package, .event {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 1rem;
+    text-align: center; /* Center the content */
+}
+
+.social-media h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    color: white; /* Make the text color white */
+}
+
+.social-media a {
+    margin: 0 1rem;
+    color: white; /* Icon color */
+    font-size: 2rem; /* Increase icon size for better visibility */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.social-media a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 2rem 0;
+    background-color: #444; /* Dark background for FAQs */
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.faq-section h3 {
+    color: white; /* Heading color */
+    text-align: center; /* Center the heading */
+}
+
+.faq-item {
+    margin: 1rem 0;
+}
+
+.faq-question {
+    cursor: pointer; /* Indicate that it's clickable */
+    color: #ffcc00; /* Color for questions */
+}
+
+.faq-answer {
+    color: white; /* Color for answers */
+    padding-left: 1rem; /* Indent answers */
+}
+
+.package h3 i {
+    margin-right: 0.5rem; /* Space between the icon and the text */
+    color: #ffcc00; /* Icon color */
+    font-size: 1.5rem; /* Adjust the icon size */
+}
+
+/* General Styles for Sections */
+section {
+    margin: 2rem 0; /* Uniform margin for sections */
+}
+
+/* Button Styles */
+.buy-btn {
+    background-color: #ffcc00; /* Button color */
+    color: #000; /* Text color */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Padding */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.buy-btn:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.testimonials {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+    justify-content: center; /* Center modal content horizontally */
+    align-items: center; /* Center modal content vertically */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 90%;
+    max-width: 400px; /* Maximum width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: fadeIn 0.3s; /* Fade-in animation */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000; /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+form {
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add Remember Me Checkbox */
+.remember-me {
+    display: flex; /* Flexbox for checkbox */
+    align-items: center; /* Center align items */
+    margin: 10px 0; /* Space above and below */
+}
+
+.remember-me input {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+/* Login Form Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically on the page */
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.login-form {
+    background-color: white; /* White background for the form */
+    padding: 2rem; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 300px; /* Fixed width for consistency */
+}
+
+.login-form h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 1rem; /* Space below each input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #4CAF50; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.remember-me {
+    display: flex; /* Flexbox for checkbox alignment */
+    align-items: center; /* Center align items */
+    margin: 10px 0; /* Space above and below */
+}
+
+.remember-me input {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+.login-form button {
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    padding: 10px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    width: 100%; /* Full width */
+    font-size: 1rem; /* Consistent font size */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.login-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.diamond-package {
+    margin-top: 15px; /* Space above the diamond package */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for the package section */
+    border: 1px solid #ddd; /* Border for separation */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.diamond-package h4 {
+    font-size: 1.1em; /* Slightly larger font for package title */
+    margin: 0 0 5px; /* Spacing below the title */
+}
+
+.diamond-package p {
+    margin: 5px 0; /* Spacing around the price text */
+}
+
+.buy-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
